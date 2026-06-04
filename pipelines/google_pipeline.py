@@ -30,6 +30,7 @@ WINDSOR_BASE = "https://connectors.windsor.ai/google_ads"
 # ---------------------------------------------------------------------------
 CLIENTS = {
     "vogelschutz": ["537-317-1947"],
+    # "vsk": ["291-201-3794"],  # Windsor can't separate this from vogelschutz
     # Add other clients when their Google Ads accounts are connected:
     # "famev":                 ["XXX-XXX-XXXX"],
     # "fruchtalarm":           ["XXX-XXX-XXXX"],

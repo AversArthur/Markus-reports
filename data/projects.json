@@ -1,5 +1,6 @@
 [
   { "id": "vogelschutz",          "name": "Vogelschutz-Komitee" },
+  { "id": "vsk",                  "name": "VsK Vogelschutz-Komitee e.V." },
   { "id": "famev",                "name": "Famev" },
   { "id": "fruchtalarm",          "name": "Fruchtalarm" },
   { "id": "reporter_ohne_grenzen","name": "Reporter ohne Grenzen" },

@@ -31,6 +31,7 @@ WINDSOR_GADS = "https://connectors.windsor.ai/google_ads"
 # ---------------------------------------------------------------------------
 GOOGLE_CLIENTS = {
     "vogelschutz": ["537-317-1947"],
+    # "vsk": ["291-201-3794"],  # Windsor can't separate this from vogelschutz
     # "famev": ["XXX-XXX-XXXX"],
 }
 
