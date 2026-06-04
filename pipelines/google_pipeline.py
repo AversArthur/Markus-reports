@@ -1,11 +1,11 @@
 """
 Google Ads pipeline via Windsor.ai.
 
-Fetches yesterday's data from Windsor.ai and appends one row to
-data/{client_id}/google.json.
+Fetches yesterday's data from Windsor.ai (all accounts in one request)
+and appends one row per client to data/{client_id}/google.json.
 
 Required env vars:
-  WINDSOR_API_KEY  – found in Windsor.ai dashboard → Settings → API
+  WINDSOR_API_KEY  – Windsor.ai Settings → API
 
 Install:
   pip install requests python-dotenv
@@ -25,95 +25,100 @@ WINDSOR_API_KEY = os.environ["WINDSOR_API_KEY"]
 WINDSOR_BASE = "https://connectors.windsor.ai/google_ads"
 
 # ---------------------------------------------------------------------------
-# Config: map client IDs to one or more Google Ads account IDs.
-# Use a list when one client has multiple ad accounts (they will be summed).
+# Config: map client IDs to Google Ads account IDs.
+# Data is fetched in one request and split client-side by account_id.
 # ---------------------------------------------------------------------------
 CLIENTS = {
-    "vogelschutz": ["537-317-1947"],
-    # "vsk": ["291-201-3794"],  # Windsor can't separate this from vogelschutz
+    "vogelschutz": "537-317-1947",
+    "vsk": "291-201-3794",
     # Add other clients when their Google Ads accounts are connected:
-    # "famev":                 ["XXX-XXX-XXXX"],
-    # "fruchtalarm":           ["XXX-XXX-XXXX"],
-    # "reporter_ohne_grenzen": ["XXX-XXX-XXXX"],
-    # "rettungshunde":         ["XXX-XXX-XXXX"],
-    # "sound_of_peace":        ["XXX-XXX-XXXX"],
+    # "famev":                 "XXX-XXX-XXXX",
+    # "fruchtalarm":           "XXX-XXX-XXXX",
+    # "reporter_ohne_grenzen": "XXX-XXX-XXXX",
+    # "rettungshunde":         "XXX-XXX-XXXX",
+    # "sound_of_peace":        "XXX-XXX-XXXX",
 }
 
 FIELDS = [
-    "date", "spend", "clicks", "impressions", "all_conversions",
+    "date",
+    "account_id",
+    "spend",
+    "clicks",
+    "impressions",
+    "all_conversions",
 ]
 
 YESTERDAY = date.today() - timedelta(days=1)
 
 
-def fetch_one_account(account_id: str, day: date) -> dict:
+def fetch_all_accounts(day):
+    """One request for all clients — per-account filter mixes accounts."""
     params = {
         "api_key": WINDSOR_API_KEY,
         "date_from": str(day),
         "date_to": str(day),
         "fields": ",".join(FIELDS),
-        "account_id": account_id,
     }
-    resp = requests.get(WINDSOR_BASE, params=params, timeout=30)
+    resp = requests.get(WINDSOR_BASE, params=params, timeout=(10, 30))
     resp.raise_for_status()
-    rows = resp.json().get("data", [])
-    return {
-        "spend":  sum(float(r.get("spend", 0) or 0) for r in rows),
-        "clicks": sum(int(r.get("clicks", 0) or 0) for r in rows),
-        "imp":    sum(int(r.get("impressions", 0) or 0) for r in rows),
-        "donors": sum(int(r.get("all_conversions", 0) or 0) for r in rows),
-    }
+    return resp.json().get("data", [])
 
 
-def fetch_day(account_ids: list, day: date) -> dict:
-    totals = {"spend": 0.0, "clicks": 0, "imp": 0, "donors": 0}
-    for aid in account_ids:
-        result = fetch_one_account(aid, day)
-        for k in totals:
-            totals[k] += result[k]
-    donors = totals["donors"]
+def aggregate_rows(rows):
+    spend = sum(float(r.get("spend", 0) or 0) for r in rows)
+    clicks = sum(int(r.get("clicks", 0) or 0) for r in rows)
+    imp = sum(int(r.get("impressions", 0) or 0) for r in rows)
+    donors = sum(int(r.get("all_conversions", 0) or 0) for r in rows)
     return {
-        "date":     str(day),
-        "spend":    round(totals["spend"], 2),
-        "donors":   donors,
-        "rec":      0,
-        "einzel":   donors,
-        "imp":      totals["imp"],
-        "clicks":   totals["clicks"],
-        "lpvisits": totals["clicks"],
+        "spend": round(spend, 2),
+        "donors": donors,
+        "rec": 0,
+        "einzel": donors,
+        "imp": imp,
+        "clicks": clicks,
+        "lpvisits": clicks,
     }
 
 
 def run():
     data_root = Path(__file__).parent.parent / "data"
 
-    for client_id, account_ids in CLIENTS.items():
-        if isinstance(account_ids, str):
-            account_ids = [account_ids]
-
+    needs_update = {}
+    for client_id in CLIENTS:
         path = data_root / client_id / "google.json"
         if path.exists():
             existing = json.loads(path.read_text())
         else:
             existing = {"updated": "", "rows": []}
+        if str(YESTERDAY) not in {r["date"] for r in existing["rows"]}:
+            needs_update[client_id] = existing
 
-        existing_dates = {r["date"] for r in existing["rows"]}
-        if str(YESTERDAY) in existing_dates:
-            print(f"  {client_id}: {YESTERDAY} already present, skipping")
-            continue
+    if not needs_update:
+        print("All Google clients already up to date.")
+        return
 
-        accs = ", ".join(account_ids)
-        print(f"Fetching Google Ads for {client_id} [{accs}] / {YESTERDAY}...")
-        row = fetch_day(account_ids, YESTERDAY)
+    print(f"Fetching Google Ads / {YESTERDAY} (all accounts, one request)...")
+    all_rows = fetch_all_accounts(YESTERDAY)
+
+    by_account = {}
+    for row in all_rows:
+        acc_id = str(row.get("account_id", ""))
+        by_account.setdefault(acc_id, []).append(row)
+
+    for client_id, existing in needs_update.items():
+        account_id = CLIENTS[client_id]
+        acc_rows = by_account.get(str(account_id), [])
+        metrics = aggregate_rows(acc_rows)
+        row = {"date": str(YESTERDAY), **metrics}
 
         existing["rows"].append(row)
         existing["rows"].sort(key=lambda r: r["date"])
         existing["updated"] = str(date.today())
 
+        path = data_root / client_id / "google.json"
         path.write_text(json.dumps(existing, indent=2, ensure_ascii=False))
         s, d, c = row["spend"], row["donors"], row["clicks"]
-        print(f"  spend={s} donors={d} clicks={c}")
-        print(f"  → Appended to {path}")
+        print(f"  {client_id}: spend={s} donors={d} clicks={c}")
 
 
 if __name__ == "__main__":

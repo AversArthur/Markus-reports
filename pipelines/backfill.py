@@ -30,9 +30,9 @@ WINDSOR_GADS = "https://connectors.windsor.ai/google_ads"
 # Config
 # ---------------------------------------------------------------------------
 GOOGLE_CLIENTS = {
-    "vogelschutz": ["537-317-1947"],
-    # "vsk": ["291-201-3794"],  # Windsor can't separate this from vogelschutz
-    # "famev": ["XXX-XXX-XXXX"],
+    "vogelschutz": "537-317-1947",
+    "vsk": "291-201-3794",
+    # "famev": "XXX-XXX-XXXX",
 }
 
 FACEBOOK_CLIENTS = {
@@ -56,7 +56,9 @@ FACEBOOK_FIELDS = [
     "conversions_donate_website",                    # Website Donations / Dauerspende
 ]
 
-GOOGLE_FIELDS = ["date", "spend", "clicks", "impressions", "all_conversions"]
+GOOGLE_FIELDS = [
+    "date", "account_id", "spend", "clicks", "impressions", "all_conversions",
+]
 
 
 def fetch_fb_all_accounts(date_from, date_to):
@@ -72,15 +74,15 @@ def fetch_fb_all_accounts(date_from, date_to):
     return resp.json().get("data", [])
 
 
-def fetch_google_range(account_id, date_from, date_to):
+def fetch_google_all_accounts(date_from, date_to):
+    """Fetch all Google accounts at once — per-account filter mixes accounts."""
     params = {
         "api_key": WINDSOR_API_KEY,
         "date_from": str(date_from),
         "date_to": str(date_to),
         "fields": ",".join(GOOGLE_FIELDS),
-        "account_id": account_id,
     }
-    resp = requests.get(WINDSOR_GADS, params=params, timeout=60)
+    resp = requests.get(WINDSOR_GADS, params=params, timeout=(10, 60))
     resp.raise_for_status()
     return resp.json().get("data", [])
 
@@ -199,17 +201,22 @@ def backfill_google(data_root, days):
     date_to = date.today() - timedelta(days=1)
     date_from = date_to - timedelta(days=days - 1)
 
-    for client_id, account_ids in GOOGLE_CLIENTS.items():
-        if isinstance(account_ids, str):
-            account_ids = [account_ids]
-        print(f"\n[Google] {client_id}")
-        all_raw = []
-        for aid in account_ids:
-            print(f"  account {aid}...")
-            raw = fetch_google_range(aid, date_from, date_to)
-            all_raw.extend(raw)
-            print(f"    {len(raw)} rows")
-        by_date = google_rows_to_daily(all_raw)
+    print("\n[Google] Fetching all accounts in one request...")
+    all_raw = fetch_google_all_accounts(date_from, date_to)
+    print(f"  {len(all_raw)} total rows received")
+
+    by_account = {}
+    for row in all_raw:
+        acc_id = str(row.get("account_id", ""))
+        by_account.setdefault(acc_id, []).append(row)
+
+    for client_id, account_id in GOOGLE_CLIENTS.items():
+        acc_rows = by_account.get(str(account_id), [])
+        print(f"\n[Google] {client_id} ({account_id}) — {len(acc_rows)} rows")
+        if not acc_rows:
+            print("  no data — skipping")
+            continue
+        by_date = google_rows_to_daily(acc_rows)
         rows = build_rows(by_date, date_from, date_to)
         save(data_root / client_id / "google.json", rows)
 

@@ -3487,19 +3487,19 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 2,
+      "imp": 0,
       "clicks": 0,
       "lpvisits": 0
     },
     {
       "date": "2026-05-19",
-      "spend": 0.96,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 8,
-      "clicks": 1,
-      "lpvisits": 1
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-05-20",
@@ -3507,29 +3507,29 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 6,
+      "imp": 0,
       "clicks": 0,
       "lpvisits": 0
     },
     {
       "date": "2026-05-21",
-      "spend": 12.01,
+      "spend": 12.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 646,
-      "clicks": 17,
-      "lpvisits": 17
+      "imp": 643,
+      "clicks": 16,
+      "lpvisits": 16
     },
     {
       "date": "2026-05-22",
-      "spend": 93.86,
+      "spend": 93.85,
       "donors": 1,
       "rec": 0,
       "einzel": 1,
-      "imp": 1725,
-      "clicks": 38,
-      "lpvisits": 38
+      "imp": 1721,
+      "clicks": 37,
+      "lpvisits": 37
     },
     {
       "date": "2026-05-23",
@@ -3537,7 +3537,7 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 1633,
+      "imp": 1627,
       "clicks": 52,
       "lpvisits": 52
     },
@@ -3547,59 +3547,59 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 1588,
+      "imp": 1582,
       "clicks": 46,
       "lpvisits": 46
     },
     {
       "date": "2026-05-25",
-      "spend": 57.0,
+      "spend": 55.06,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 670,
-      "clicks": 22,
-      "lpvisits": 22
+      "imp": 665,
+      "clicks": 20,
+      "lpvisits": 20
     },
     {
       "date": "2026-05-26",
-      "spend": 2.38,
+      "spend": 2.08,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 433,
-      "clicks": 5,
-      "lpvisits": 5
+      "imp": 426,
+      "clicks": 4,
+      "lpvisits": 4
     },
     {
       "date": "2026-05-27",
-      "spend": 1.9,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 5,
-      "clicks": 2,
-      "lpvisits": 2
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-05-28",
-      "spend": 1.67,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 6,
-      "clicks": 2,
-      "lpvisits": 2
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-05-29",
-      "spend": 1.34,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 2,
-      "clicks": 1,
-      "lpvisits": 1
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-05-30",
@@ -3607,39 +3607,39 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 2,
+      "imp": 0,
       "clicks": 0,
       "lpvisits": 0
     },
     {
       "date": "2026-05-31",
-      "spend": 1.17,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 6,
-      "clicks": 3,
-      "lpvisits": 3
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-06-01",
-      "spend": 1.95,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 8,
-      "clicks": 1,
-      "lpvisits": 1
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-06-02",
-      "spend": 2.95,
+      "spend": 0.0,
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 5,
-      "clicks": 2,
-      "lpvisits": 2
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
     },
     {
       "date": "2026-06-03",
@@ -3647,7 +3647,7 @@
       "donors": 0,
       "rec": 0,
       "einzel": 0,
-      "imp": 2,
+      "imp": 0,
       "clicks": 0,
       "lpvisits": 0
     }
