@@ -1,0 +1,313 @@
+
+<h2 class="sr-only">Fundraising Media Dashboard — bereinigt ohne Spendenmodell-Filter</h2>
+<style>
+*{box-sizing:border-box;}
+.d{font-family:var(--font-sans);background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;}
+.d-head{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:0.5px solid var(--color-border-tertiary);flex-wrap:wrap;gap:10px;}
+.d-htitle{font-size:14px;font-weight:500;color:var(--color-text-primary);margin:0;}
+.d-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.d-select{font-size:12px;padding:4px 8px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-primary);cursor:pointer;}
+.d-date{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--color-text-secondary);}
+.d-date input{font-size:12px;padding:4px 8px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-primary);}
+.d-tabs{display:flex;border-bottom:0.5px solid var(--color-border-tertiary);padding:0 20px;}
+.d-tab{font-size:12px;padding:8px 14px;cursor:pointer;color:var(--color-text-secondary);border-bottom:2px solid transparent;margin-bottom:-0.5px;background:none;border-top:none;border-left:none;border-right:none;}
+.d-tab.active{color:var(--color-text-primary);font-weight:500;border-bottom:2px solid var(--color-text-primary);}
+.d-body{padding:16px 20px;}
+.kpi-row{display:grid;gap:10px;margin-bottom:12px;}
+.kpi-row.cols-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+.kpi-row.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.kpi{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px;}
+.kpi-l{font-size:11px;color:var(--color-text-secondary);margin:0 0 5px;}
+.kpi-v{font-size:22px;font-weight:500;color:var(--color-text-primary);margin:0 0 2px;line-height:1.1;}
+.kpi-d{font-size:11px;margin:0;}
+.kpi-d.up{color:var(--color-text-success);}
+.kpi-d.down{color:var(--color-text-danger);}
+.kpi-d.neu{color:var(--color-text-tertiary);}
+.kpi-sub{display:flex;gap:8px;margin-top:8px;padding-top:8px;border-top:0.5px solid var(--color-border-tertiary);}
+.kpi-sub-item{flex:1;}
+.kpi-sub-l{font-size:10px;color:var(--color-text-tertiary);margin:0 0 2px;}
+.kpi-sub-v{font-size:13px;font-weight:500;color:var(--color-text-primary);margin:0;}
+.diag-toggle{display:flex;align-items:center;gap:6px;margin-top:4px;cursor:pointer;font-size:12px;color:var(--color-text-tertiary);user-select:none;padding:8px 0;}
+.diag-toggle:hover{color:var(--color-text-secondary);}
+.diag-section{border-top:0.5px dashed var(--color-border-tertiary);padding-top:12px;margin-top:4px;}
+.diag-label{font-size:11px;color:var(--color-text-tertiary);margin:0 0 10px;}
+.ch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.ch-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px 14px;}
+.ch-name{font-size:12px;font-weight:500;color:var(--color-text-primary);margin:0 0 10px;display:flex;align-items:center;gap:6px;}
+.ch-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.ch-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;}
+.ch-kpi{background:var(--color-background-primary);border-radius:var(--border-radius-md);padding:8px 10px;border:0.5px solid var(--color-border-tertiary);}
+.ch-kpi-l{font-size:10px;color:var(--color-text-tertiary);margin:0 0 3px;}
+.ch-kpi-v{font-size:15px;font-weight:500;color:var(--color-text-primary);margin:0 0 1px;}
+.ch-kpi-d{font-size:10px;margin:0;}
+.ch-kpi-d.up{color:var(--color-text-success);}
+.ch-kpi-d.down{color:var(--color-text-danger);}
+.ch-kpi-d.neu{color:var(--color-text-tertiary);}
+.d-foot{padding:10px 20px;border-top:0.5px solid var(--color-border-tertiary);display:flex;align-items:center;justify-content:space-between;}
+.d-foot-note{font-size:11px;color:var(--color-text-tertiary);}
+</style>
+
+<div class="d">
+  <div class="d-head">
+    <p class="d-htitle"><i class="ti ti-chart-bar" aria-hidden="true" style="font-size:14px;margin-right:5px;vertical-align:-2px"></i>Media Dashboard</p>
+    <div class="d-controls">
+      <select class="d-select" id="ngo-select" onchange="render()">
+        <option value="all">Alle NGO-Kunden</option>
+        <option value="ngo1">NGO Kunde A</option>
+        <option value="ngo2">NGO Kunde B</option>
+        <option value="ngo3">NGO Kunde C</option>
+      </select>
+      <div class="d-date">
+        <span>Von</span><input type="date" id="d-from" value="2025-04-21">
+        <span>Bis</span><input type="date" id="d-to" value="2025-05-18">
+        <button onclick="render()" style="font-size:12px;padding:4px 10px;">Anwenden</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-tabs">
+    <button class="d-tab active" onclick="switchTab('gesamt',this)">Gesamt</button>
+    <button class="d-tab" onclick="switchTab('meta',this)">Meta Ads</button>
+    <button class="d-tab" onclick="switchTab('google',this)">Google Ads</button>
+    <button class="d-tab" onclick="switchTab('vergleich',this)">Kanal-Vergleich</button>
+  </div>
+
+  <div class="d-body">
+
+    <div id="view-gesamt">
+      <div class="kpi-row cols-4">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="g-spend">–</p>
+          <p class="kpi-d neu" id="g-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="g-cpd">–</p>
+          <p class="kpi-d neu" id="g-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Neue Spender</p>
+          <p class="kpi-v" id="g-donors">–</p>
+          <p class="kpi-d neu" id="g-donors-d">–</p>
+          <div class="kpi-sub">
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Recurring</p><p class="kpi-sub-v" id="g-rec">–</p></div>
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Einzelspender</p><p class="kpi-sub-v" id="g-einzel">–</p></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="g-lpcvr">–</p>
+          <p class="kpi-d neu" id="g-lpcvr-d">–</p>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('g-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="g-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE — nur bei Auffälligkeiten relevant</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="g-imp">–</p><p class="kpi-d neu" id="g-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="g-clicks">–</p><p class="kpi-d neu" id="g-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="g-ctr">–</p><p class="kpi-d neu" id="g-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="g-c2d">–</p><p class="kpi-d neu" id="g-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-meta" style="display:none">
+      <div class="kpi-row cols-4">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="m-spend">–</p><p class="kpi-d neu" id="m-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="m-cpd">–</p><p class="kpi-d neu" id="m-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Neue Spender</p>
+          <p class="kpi-v" id="m-donors">–</p><p class="kpi-d neu" id="m-donors-d">–</p>
+          <div class="kpi-sub">
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Recurring</p><p class="kpi-sub-v" id="m-rec">–</p></div>
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Einzelspender</p><p class="kpi-sub-v" id="m-einzel">–</p></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="m-lpcvr">–</p><p class="kpi-d neu" id="m-lpcvr-d">–</p>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('m-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="m-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="m-imp">–</p><p class="kpi-d neu" id="m-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="m-clicks">–</p><p class="kpi-d neu" id="m-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="m-ctr">–</p><p class="kpi-d neu" id="m-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="m-c2d">–</p><p class="kpi-d neu" id="m-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-google" style="display:none">
+      <div class="kpi-row cols-4">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="gg-spend">–</p><p class="kpi-d neu" id="gg-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="gg-cpd">–</p><p class="kpi-d neu" id="gg-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>Neue Spender</p>
+          <p class="kpi-v" id="gg-donors">–</p><p class="kpi-d neu" id="gg-donors-d">–</p>
+          <div class="kpi-sub">
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Recurring</p><p class="kpi-sub-v" id="gg-rec">–</p></div>
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Einzelspender</p><p class="kpi-sub-v" id="gg-einzel">–</p></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" aria-hidden="true" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="gg-lpcvr">–</p><p class="kpi-d neu" id="gg-lpcvr-d">–</p>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('gg-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="gg-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="gg-imp">–</p><p class="kpi-d neu" id="gg-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="gg-clicks">–</p><p class="kpi-d neu" id="gg-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="gg-ctr">–</p><p class="kpi-d neu" id="gg-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="gg-c2d">–</p><p class="kpi-d neu" id="gg-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-vergleich" style="display:none">
+      <div class="ch-grid">
+        <div class="ch-card">
+          <p class="ch-name"><span class="ch-dot" style="background:#378ADD"></span>Meta Ads</p>
+          <div class="ch-kpis">
+            <div class="ch-kpi"><p class="ch-kpi-l">Ad Spend</p><p class="ch-kpi-v" id="cv-m-spend">–</p><p class="ch-kpi-d neu" id="cv-m-spend-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Cost per Donor</p><p class="ch-kpi-v" id="cv-m-cpd">–</p><p class="ch-kpi-d neu" id="cv-m-cpd-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Neue Spender</p><p class="ch-kpi-v" id="cv-m-donors">–</p><p class="ch-kpi-d neu" id="cv-m-donors-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">LP Conv. Rate</p><p class="ch-kpi-v" id="cv-m-lpcvr">–</p><p class="ch-kpi-d neu" id="cv-m-lpcvr-d">–</p></div>
+          </div>
+        </div>
+        <div class="ch-card">
+          <p class="ch-name"><span class="ch-dot" style="background:#1D9E75"></span>Google Ads</p>
+          <div class="ch-kpis">
+            <div class="ch-kpi"><p class="ch-kpi-l">Ad Spend</p><p class="ch-kpi-v" id="cv-g-spend">–</p><p class="ch-kpi-d neu" id="cv-g-spend-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Cost per Donor</p><p class="ch-kpi-v" id="cv-g-cpd">–</p><p class="ch-kpi-d neu" id="cv-g-cpd-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Neue Spender</p><p class="ch-kpi-v" id="cv-g-donors">–</p><p class="ch-kpi-d neu" id="cv-g-donors-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">LP Conv. Rate</p><p class="ch-kpi-v" id="cv-g-lpcvr">–</p><p class="ch-kpi-d neu" id="cv-g-lpcvr-d">–</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('cv-diag',this)" style="margin-top:12px">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="cv-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE — Kanal-Vergleich</p>
+        <div class="ch-grid">
+          <div class="ch-card">
+            <p class="ch-name"><span class="ch-dot" style="background:#378ADD"></span>Meta Ads</p>
+            <div class="ch-kpis">
+              <div class="ch-kpi"><p class="ch-kpi-l">Impressions</p><p class="ch-kpi-v" id="cv-m-imp">–</p><p class="ch-kpi-d neu" id="cv-m-imp-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Clicks</p><p class="ch-kpi-v" id="cv-m-clicks">–</p><p class="ch-kpi-d neu" id="cv-m-clicks-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">CTR</p><p class="ch-kpi-v" id="cv-m-ctr">–</p><p class="ch-kpi-d neu" id="cv-m-ctr-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Click-to-Donor</p><p class="ch-kpi-v" id="cv-m-c2d">–</p><p class="ch-kpi-d neu" id="cv-m-c2d-d">–</p></div>
+            </div>
+          </div>
+          <div class="ch-card">
+            <p class="ch-name"><span class="ch-dot" style="background:#1D9E75"></span>Google Ads</p>
+            <div class="ch-kpis">
+              <div class="ch-kpi"><p class="ch-kpi-l">Impressions</p><p class="ch-kpi-v" id="cv-g-imp">–</p><p class="ch-kpi-d neu" id="cv-g-imp-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Clicks</p><p class="ch-kpi-v" id="cv-g-clicks">–</p><p class="ch-kpi-d neu" id="cv-g-clicks-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">CTR</p><p class="ch-kpi-v" id="cv-g-ctr">–</p><p class="ch-kpi-d neu" id="cv-g-ctr-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Click-to-Donor</p><p class="ch-kpi-v" id="cv-g-c2d">–</p><p class="ch-kpi-d neu" id="cv-g-c2d-d">–</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-foot">
+    <span class="d-foot-note" id="d-foot-note">Daten: Meta Ads + Google Ads · Beispieldaten</span>
+    <button onclick="sendPrompt('Was sind die nächsten Schritte für das NGO Fundraising Dashboard?')" style="font-size:12px;padding:4px 10px;">Nächste Schritte ↗</button>
+  </div>
+</div>
+
+<script>
+const DATA={
+  ngo1:{meta:{spend:12400,revenue:41200,donors:318,rec:210,einzel:108,imp:1820000,clicks:24600,lpvisits:8200},google:{spend:5800,revenue:22600,donors:164,rec:98,einzel:66,imp:940000,clicks:18200,lpvisits:5400}},
+  ngo2:{meta:{spend:8900,revenue:27100,donors:201,rec:140,einzel:61,imp:1340000,clicks:17800,lpvisits:6100},google:{spend:3200,revenue:11400,donors:98,rec:60,einzel:38,imp:620000,clicks:11400,lpvisits:3200}},
+  ngo3:{meta:{spend:6100,revenue:19800,donors:143,rec:95,einzel:48,imp:980000,clicks:13200,lpvisits:4400},google:{spend:2100,revenue:8200,donors:71,rec:44,einzel:27,imp:410000,clicks:8800,lpvisits:2600}},
+};
+DATA.all={meta:{spend:0,revenue:0,donors:0,rec:0,einzel:0,imp:0,clicks:0,lpvisits:0},google:{spend:0,revenue:0,donors:0,rec:0,einzel:0,imp:0,clicks:0,lpvisits:0}};
+['ngo1','ngo2','ngo3'].forEach(k=>['meta','google'].forEach(ch=>Object.keys(DATA.all[ch]).forEach(m=>{DATA.all[ch][m]+=DATA[k][ch][m];})));
+
+const PREV=0.87;
+
+function fmtEur(n){return n>=1000?(n/1000).toFixed(1)+'k €':n+'€';}
+function fmtN(n){return n>=1000?(n/1000).toFixed(1)+'k':String(n);}
+function delta(v,hb){const d=Math.round(((v-v*PREV)/(v*PREV))*100);const up=d>=0;const cls=(hb?up:!up)?'up':'down';return{cls,text:(up?'▲':'▼')+' '+Math.abs(d)+'% ggü. Vorperiode'};}
+
+function set(id,val){const e=document.getElementById(id);if(e)e.textContent=val;}
+function setD(id,val,cls){const e=document.getElementById(id);if(e){e.textContent=val;e.className='kpi-d '+cls;}}
+function setChD(id,val,cls){const e=document.getElementById(id);if(e){e.textContent=val;e.className='ch-kpi-d '+cls;}}
+
+function fill(src,pre,isCh){
+  const cpd=Math.round(src.spend/src.donors);
+  const lpcvr=(src.donors/src.lpvisits*100);
+  const ctr=(src.clicks/src.imp*100);
+  const c2d=(src.donors/src.clicks*100);
+  const sd=isCh?setChD:setD;
+  set(pre+'spend',fmtEur(src.spend)); sd(pre+'spend-d',delta(src.spend,true).text,delta(src.spend,true).cls);
+  set(pre+'cpd',cpd+'€'); sd(pre+'cpd-d',delta(cpd,false).text,delta(cpd,false).cls);
+  set(pre+'donors',fmtN(src.donors)); sd(pre+'donors-d',delta(src.donors,true).text,delta(src.donors,true).cls);
+  set(pre+'lpcvr',lpcvr.toFixed(1)+'%'); sd(pre+'lpcvr-d',delta(lpcvr,true).text,delta(lpcvr,true).cls);
+  set(pre+'imp',fmtN(src.imp)); sd(pre+'imp-d',delta(src.imp,true).text,delta(src.imp,true).cls);
+  set(pre+'clicks',fmtN(src.clicks)); sd(pre+'clicks-d',delta(src.clicks,true).text,delta(src.clicks,true).cls);
+  set(pre+'ctr',ctr.toFixed(2)+'%'); sd(pre+'ctr-d',delta(ctr,true).text,delta(ctr,true).cls);
+  set(pre+'c2d',c2d.toFixed(2)+'%'); sd(pre+'c2d-d',delta(c2d,true).text,delta(c2d,true).cls);
+  if(!isCh){set(pre+'rec',fmtN(src.rec));set(pre+'einzel',fmtN(src.einzel));}
+}
+
+function render(){
+  const ngo=document.getElementById('ngo-select').value;
+  const d=DATA[ngo];
+  const total={spend:d.meta.spend+d.google.spend,revenue:d.meta.revenue+d.google.revenue,donors:d.meta.donors+d.google.donors,rec:d.meta.rec+d.google.rec,einzel:d.meta.einzel+d.google.einzel,imp:d.meta.imp+d.google.imp,clicks:d.meta.clicks+d.google.clicks,lpvisits:d.meta.lpvisits+d.google.lpvisits};
+  fill(total,'g-',false);
+  fill(d.meta,'m-',false);
+  fill(d.google,'gg-',false);
+  fill(d.meta,'cv-m-',true);
+  fill(d.google,'cv-g-',true);
+  const from=document.getElementById('d-from').value;
+  const to=document.getElementById('d-to').value;
+  set('d-foot-note','Zeitraum: '+from+' – '+to+' · Beispieldaten');
+}
+
+function switchTab(tab,btn){
+  ['gesamt','meta','google','vergleich'].forEach(t=>{document.getElementById('view-'+t).style.display=t===tab?'block':'none';});
+  document.querySelectorAll('.d-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function toggleDiag(id,el){
+  const sec=document.getElementById(id);
+  const open=sec.style.display==='block';
+  sec.style.display=open?'none':'block';
+  el.innerHTML='<i class="ti ti-chevron-'+(open?'down':'up')+'" style="font-size:13px"></i> Diagnose-Metriken '+(open?'einblenden':'ausblenden');
+}
+
+render();
+</script>

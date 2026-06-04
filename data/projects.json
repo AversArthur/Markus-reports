@@ -1,0 +1,8 @@
+[
+  { "id": "vogelschutz",          "name": "Vogelschutz-Komitee" },
+  { "id": "famev",                "name": "Famev" },
+  { "id": "fruchtalarm",          "name": "Fruchtalarm" },
+  { "id": "reporter_ohne_grenzen","name": "Reporter ohne Grenzen" },
+  { "id": "rettungshunde",        "name": "Rettungshunde SEAL DOGS e.V." },
+  { "id": "sound_of_peace",       "name": "Sound of Peace gGmbH" }
+]

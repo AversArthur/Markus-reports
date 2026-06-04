@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
+  <style>
+    :root {
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --color-bg: #ffffff;
+      --color-bg2: #f8f9fa;
+      --color-text: #111827;
+      --color-text2: #6b7280;
+      --color-text3: #9ca3af;
+      --color-ok: #059669;
+      --color-err: #dc2626;
+      --color-border: #e5e7eb;
+      --color-border2: #d1d5db;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: #f3f4f6; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 32px 16px; }
+    .d { background: var(--color-bg); border: 0.5px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; width: 100%; max-width: 960px; }
+
+    /* ── Header ── */
+    .d-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 0.5px solid var(--color-border); flex-wrap: wrap; gap: 10px; }
+    .d-htitle { font-size: 14px; font-weight: 500; color: var(--color-text); }
+    .d-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .d-select { font-size: 12px; padding: 4px 8px; border-radius: var(--radius-md); border: 0.5px solid var(--color-border2); background: var(--color-bg2); color: var(--color-text); cursor: pointer; }
+
+    /* ── Date presets ── */
+    .preset-row { display: flex; align-items: center; gap: 6px; padding: 10px 20px; border-bottom: 0.5px solid var(--color-border); flex-wrap: wrap; }
+    .preset-btn { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid var(--color-border2); background: var(--color-bg2); color: var(--color-text2); cursor: pointer; white-space: nowrap; transition: background 0.15s, color 0.15s; }
+    .preset-btn:hover { background: var(--color-border); }
+    .preset-btn.active { background: var(--color-text); color: #fff; border-color: var(--color-text); }
+    .custom-range { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--color-text2); }
+    .custom-range input { font-size: 11px; padding: 3px 7px; border-radius: var(--radius-md); border: 0.5px solid var(--color-border2); background: var(--color-bg2); color: var(--color-text); }
+    .custom-range button { font-size: 11px; padding: 3px 9px; border-radius: var(--radius-md); border: 0.5px solid var(--color-border2); background: var(--color-bg2); cursor: pointer; }
+
+    /* ── Tabs ── */
+    .d-tabs { display: flex; border-bottom: 0.5px solid var(--color-border); padding: 0 20px; }
+    .d-tab { font-size: 12px; padding: 8px 14px; cursor: pointer; color: var(--color-text2); border-bottom: 2px solid transparent; margin-bottom: -0.5px; background: none; border-top: none; border-left: none; border-right: none; }
+    .d-tab.active { color: var(--color-text); font-weight: 500; border-bottom: 2px solid var(--color-text); }
+
+    /* ── Body ── */
+    .d-body { padding: 16px 20px; }
+    .kpi-row { display: grid; gap: 10px; margin-bottom: 12px; }
+    .kpi-row.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .kpi-row.cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .kpi-row.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kpi { background: var(--color-bg2); border-radius: var(--radius-md); padding: 12px 14px; }
+    .kpi-l { font-size: 11px; color: var(--color-text2); margin: 0 0 5px; }
+    .kpi-v { font-size: 22px; font-weight: 500; color: var(--color-text); margin: 0 0 2px; line-height: 1.1; }
+    .kpi-d { font-size: 11px; margin: 0; }
+    .kpi-d.up { color: var(--color-ok); }
+    .kpi-d.down { color: var(--color-err); }
+    .kpi-d.neu { color: var(--color-text3); }
+    .kpi-sub { display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; border-top: 0.5px solid var(--color-border); }
+    .kpi-sub-item { flex: 1; }
+    .kpi-sub-l { font-size: 10px; color: var(--color-text3); margin: 0 0 2px; }
+    .kpi-sub-v { font-size: 13px; font-weight: 500; color: var(--color-text); margin: 0; }
+    .diag-toggle { display: flex; align-items: center; gap: 6px; margin-top: 4px; cursor: pointer; font-size: 12px; color: var(--color-text3); user-select: none; padding: 8px 0; }
+    .diag-toggle:hover { color: var(--color-text2); }
+    .diag-section { border-top: 0.5px dashed var(--color-border); padding-top: 12px; margin-top: 4px; }
+    .diag-label { font-size: 11px; color: var(--color-text3); margin: 0 0 10px; }
+
+    /* ── Channel comparison ── */
+    .ch-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .ch-card { background: var(--color-bg2); border-radius: var(--radius-md); padding: 12px 14px; }
+    .ch-name { font-size: 12px; font-weight: 500; color: var(--color-text); margin: 0 0 10px; display: flex; align-items: center; gap: 6px; }
+    .ch-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .ch-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .ch-kpi { background: var(--color-bg); border-radius: var(--radius-md); padding: 8px 10px; border: 0.5px solid var(--color-border); }
+    .ch-kpi-l { font-size: 10px; color: var(--color-text3); margin: 0 0 3px; }
+    .ch-kpi-v { font-size: 15px; font-weight: 500; color: var(--color-text); margin: 0 0 1px; }
+    .ch-kpi-d { font-size: 10px; margin: 0; }
+    .ch-kpi-d.up { color: var(--color-ok); }
+    .ch-kpi-d.down { color: var(--color-err); }
+    .ch-kpi-d.neu { color: var(--color-text3); }
+
+    /* ── Footer ── */
+    .d-foot { padding: 10px 20px; border-top: 0.5px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; }
+    .d-foot-note { font-size: 11px; color: var(--color-text3); }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .kpi-row.cols-4, .kpi-row.cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ch-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="d">
+
+  <!-- Header -->
+  <div class="d-head">
+    <p class="d-htitle"><i class="ti ti-chart-bar" style="font-size:14px;margin-right:5px;vertical-align:-2px"></i>Media Dashboard</p>
+    <div class="d-controls">
+      <select class="d-select" id="project-select" onchange="onProjectChange(this.value)">
+        <option value="">Lädt...</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Date presets -->
+  <div class="preset-row">
+    <button class="preset-btn" data-preset="7d"  onclick="setPreset('7d',this)">7 Tage</button>
+    <button class="preset-btn active" data-preset="28d" onclick="setPreset('28d',this)">28 Tage</button>
+    <button class="preset-btn" data-preset="this_month"   onclick="setPreset('this_month',this)">Dieser Monat</button>
+    <button class="preset-btn" data-preset="last_month"   onclick="setPreset('last_month',this)">Letzter Monat</button>
+    <button class="preset-btn" data-preset="last_quarter" onclick="setPreset('last_quarter',this)">Letztes Quartal</button>
+    <button class="preset-btn" data-preset="this_year"    onclick="setPreset('this_year',this)">Dieses Jahr</button>
+    <div class="custom-range" id="custom-range" style="display:none">
+      <input type="date" id="d-from"> <span>–</span> <input type="date" id="d-to">
+      <button onclick="applyCustom()">OK</button>
+    </div>
+    <button class="preset-btn" data-preset="custom" onclick="setPreset('custom',this)" style="margin-left:auto">Benutzerdefiniert</button>
+  </div>
+
+  <!-- Tabs -->
+  <div class="d-tabs">
+    <button class="d-tab active" onclick="switchTab('gesamt',this)">Gesamt</button>
+    <button class="d-tab" onclick="switchTab('meta',this)">Meta Ads</button>
+    <button class="d-tab" onclick="switchTab('google',this)">Google Ads</button>
+    <button class="d-tab" onclick="switchTab('vergleich',this)">Kanal-Vergleich</button>
+  </div>
+
+  <!-- Body -->
+  <div class="d-body">
+
+    <!-- Gesamt -->
+    <div id="view-gesamt">
+      <div class="kpi-row cols-4">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="g-spend">–</p><p class="kpi-d neu" id="g-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="g-cpd">–</p><p class="kpi-d neu" id="g-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" style="font-size:11px;margin-right:3px"></i>Neue Spender</p>
+          <p class="kpi-v" id="g-donors">–</p><p class="kpi-d neu" id="g-donors-d">–</p>
+          <div class="kpi-sub">
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Recurring</p><p class="kpi-sub-v" id="g-rec">–</p></div>
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Einzelspender</p><p class="kpi-sub-v" id="g-einzel">–</p></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="g-lpcvr">–</p><p class="kpi-d neu" id="g-lpcvr-d">–</p>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('g-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="g-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE — nur bei Auffälligkeiten relevant</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="g-imp">–</p><p class="kpi-d neu" id="g-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="g-clicks">–</p><p class="kpi-d neu" id="g-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="g-ctr">–</p><p class="kpi-d neu" id="g-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="g-c2d">–</p><p class="kpi-d neu" id="g-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meta -->
+    <div id="view-meta" style="display:none">
+      <div class="kpi-row cols-5">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="m-spend">–</p><p class="kpi-d neu" id="m-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="m-cpd">–</p><p class="kpi-d neu" id="m-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" style="font-size:11px;margin-right:3px"></i>Käufe / Einzelsp.</p>
+          <p class="kpi-v" id="m-einzel">–</p><p class="kpi-d neu" id="m-einzel-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-refresh" style="font-size:11px;margin-right:3px"></i>Dauerspenden</p>
+          <p class="kpi-v" id="m-rec">–</p><p class="kpi-d neu" id="m-rec-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="m-lpcvr">–</p><p class="kpi-d neu" id="m-lpcvr-d">–</p>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--color-text3);margin-bottom:8px">
+        Gesamt: <span id="m-donors">–</span> Spender (<span id="m-donors-note">Käufe + Dauerspenden</span>)
+      </p>
+      <div class="diag-toggle" onclick="toggleDiag('m-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="m-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="m-imp">–</p><p class="kpi-d neu" id="m-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="m-clicks">–</p><p class="kpi-d neu" id="m-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="m-ctr">–</p><p class="kpi-d neu" id="m-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="m-c2d">–</p><p class="kpi-d neu" id="m-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google -->
+    <div id="view-google" style="display:none">
+      <div class="kpi-row cols-4">
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-coin" style="font-size:11px;margin-right:3px"></i>Ad Spend</p>
+          <p class="kpi-v" id="gg-spend">–</p><p class="kpi-d neu" id="gg-spend-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-users" style="font-size:11px;margin-right:3px"></i>Cost per Donor</p>
+          <p class="kpi-v" id="gg-cpd">–</p><p class="kpi-d neu" id="gg-cpd-d">–</p>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-heart" style="font-size:11px;margin-right:3px"></i>Neue Spender</p>
+          <p class="kpi-v" id="gg-donors">–</p><p class="kpi-d neu" id="gg-donors-d">–</p>
+          <div class="kpi-sub">
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Recurring</p><p class="kpi-sub-v" id="gg-rec">–</p></div>
+            <div class="kpi-sub-item"><p class="kpi-sub-l">Einzelspender</p><p class="kpi-sub-v" id="gg-einzel">–</p></div>
+          </div>
+        </div>
+        <div class="kpi">
+          <p class="kpi-l"><i class="ti ti-percentage" style="font-size:11px;margin-right:3px"></i>LP Conv. Rate</p>
+          <p class="kpi-v" id="gg-lpcvr">–</p><p class="kpi-d neu" id="gg-lpcvr-d">–</p>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('gg-diag',this)">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="gg-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE</p>
+        <div class="kpi-row cols-4">
+          <div class="kpi"><p class="kpi-l">Impressions</p><p class="kpi-v" id="gg-imp">–</p><p class="kpi-d neu" id="gg-imp-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Clicks</p><p class="kpi-v" id="gg-clicks">–</p><p class="kpi-d neu" id="gg-clicks-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">CTR</p><p class="kpi-v" id="gg-ctr">–</p><p class="kpi-d neu" id="gg-ctr-d">–</p></div>
+          <div class="kpi"><p class="kpi-l">Click-to-Donor</p><p class="kpi-v" id="gg-c2d">–</p><p class="kpi-d neu" id="gg-c2d-d">–</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kanal-Vergleich -->
+    <div id="view-vergleich" style="display:none">
+      <div class="ch-grid">
+        <div class="ch-card">
+          <p class="ch-name"><span class="ch-dot" style="background:#378ADD"></span>Meta Ads</p>
+          <div class="ch-kpis">
+            <div class="ch-kpi"><p class="ch-kpi-l">Ad Spend</p><p class="ch-kpi-v" id="cv-m-spend">–</p><p class="ch-kpi-d neu" id="cv-m-spend-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Cost per Donor</p><p class="ch-kpi-v" id="cv-m-cpd">–</p><p class="ch-kpi-d neu" id="cv-m-cpd-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Neue Spender</p><p class="ch-kpi-v" id="cv-m-donors">–</p><p class="ch-kpi-d neu" id="cv-m-donors-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">LP Conv. Rate</p><p class="ch-kpi-v" id="cv-m-lpcvr">–</p><p class="ch-kpi-d neu" id="cv-m-lpcvr-d">–</p></div>
+          </div>
+        </div>
+        <div class="ch-card">
+          <p class="ch-name"><span class="ch-dot" style="background:#1D9E75"></span>Google Ads</p>
+          <div class="ch-kpis">
+            <div class="ch-kpi"><p class="ch-kpi-l">Ad Spend</p><p class="ch-kpi-v" id="cv-g-spend">–</p><p class="ch-kpi-d neu" id="cv-g-spend-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Cost per Donor</p><p class="ch-kpi-v" id="cv-g-cpd">–</p><p class="ch-kpi-d neu" id="cv-g-cpd-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">Neue Spender</p><p class="ch-kpi-v" id="cv-g-donors">–</p><p class="ch-kpi-d neu" id="cv-g-donors-d">–</p></div>
+            <div class="ch-kpi"><p class="ch-kpi-l">LP Conv. Rate</p><p class="ch-kpi-v" id="cv-g-lpcvr">–</p><p class="ch-kpi-d neu" id="cv-g-lpcvr-d">–</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="diag-toggle" onclick="toggleDiag('cv-diag',this)" style="margin-top:12px">
+        <i class="ti ti-chevron-down" style="font-size:13px"></i> Diagnose-Metriken einblenden
+      </div>
+      <div id="cv-diag" class="diag-section" style="display:none">
+        <p class="diag-label">DIAGNOSE — Kanal-Vergleich</p>
+        <div class="ch-grid">
+          <div class="ch-card">
+            <p class="ch-name"><span class="ch-dot" style="background:#378ADD"></span>Meta Ads</p>
+            <div class="ch-kpis">
+              <div class="ch-kpi"><p class="ch-kpi-l">Impressions</p><p class="ch-kpi-v" id="cv-m-imp">–</p><p class="ch-kpi-d neu" id="cv-m-imp-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Clicks</p><p class="ch-kpi-v" id="cv-m-clicks">–</p><p class="ch-kpi-d neu" id="cv-m-clicks-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">CTR</p><p class="ch-kpi-v" id="cv-m-ctr">–</p><p class="ch-kpi-d neu" id="cv-m-ctr-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Click-to-Donor</p><p class="ch-kpi-v" id="cv-m-c2d">–</p><p class="ch-kpi-d neu" id="cv-m-c2d-d">–</p></div>
+            </div>
+          </div>
+          <div class="ch-card">
+            <p class="ch-name"><span class="ch-dot" style="background:#1D9E75"></span>Google Ads</p>
+            <div class="ch-kpis">
+              <div class="ch-kpi"><p class="ch-kpi-l">Impressions</p><p class="ch-kpi-v" id="cv-g-imp">–</p><p class="ch-kpi-d neu" id="cv-g-imp-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Clicks</p><p class="ch-kpi-v" id="cv-g-clicks">–</p><p class="ch-kpi-d neu" id="cv-g-clicks-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">CTR</p><p class="ch-kpi-v" id="cv-g-ctr">–</p><p class="ch-kpi-d neu" id="cv-g-ctr-d">–</p></div>
+              <div class="ch-kpi"><p class="ch-kpi-l">Click-to-Donor</p><p class="ch-kpi-v" id="cv-g-c2d">–</p><p class="ch-kpi-d neu" id="cv-g-c2d-d">–</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-foot">
+    <span class="d-foot-note" id="d-foot-note">Lädt...</span>
+  </div>
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────
+let PROJECTS = [];
+let DATA = { fb: null, goog: null };
+let RANGE = { from: null, to: null };   // Date objects, inclusive
+
+// ── Formatting ────────────────────────────────────────────────────────────
+const fmtEur = n => n >= 1000 ? (n / 1000).toFixed(1) + 'k €' : Math.round(n) + ' €';
+const fmtN   = n => n >= 1000 ? (n / 1000).toFixed(1) + 'k'   : String(Math.round(n));
+const fmtDate = d => d.toISOString().slice(0, 10);
+
+function delta(curr, prev, higherIsBetter) {
+  if (!prev || prev === 0) return { cls: 'neu', text: 'Keine Vorperiode' };
+  const pct = Math.round(((curr - prev) / prev) * 100);
+  const up = pct >= 0;
+  const cls = (higherIsBetter ? up : !up) ? 'up' : 'down';
+  return { cls, text: (up ? '▲' : '▼') + ' ' + Math.abs(pct) + '% ggü. Vorperiode' };
+}
+
+// ── DOM helpers ───────────────────────────────────────────────────────────
+const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+function setD(id, text, cls, isCh) {
+  const e = document.getElementById(id);
+  if (!e) return;
+  e.textContent = text;
+  e.className = (isCh ? 'ch-kpi-d' : 'kpi-d') + ' ' + cls;
+}
+
+// ── Date range helpers ────────────────────────────────────────────────────
+function daysBetween(a, b) {
+  return Math.round((b - a) / 86400000);
+}
+
+function getPresetRange(preset) {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const yd = new Date(today); yd.setDate(yd.getDate() - 1); // yesterday
+
+  switch (preset) {
+    case '7d': {
+      const f = new Date(yd); f.setDate(f.getDate() - 6);
+      return { from: f, to: yd };
+    }
+    case '28d': {
+      const f = new Date(yd); f.setDate(f.getDate() - 27);
+      return { from: f, to: yd };
+    }
+    case 'this_month':
+      return { from: new Date(today.getFullYear(), today.getMonth(), 1), to: yd };
+    case 'last_month': {
+      const t = new Date(today.getFullYear(), today.getMonth(), 0);
+      return { from: new Date(t.getFullYear(), t.getMonth(), 1), to: t };
+    }
+    case 'last_quarter': {
+      const q = Math.floor(today.getMonth() / 3);
+      const pq = q === 0 ? 3 : q - 1;
+      const yr = q === 0 ? today.getFullYear() - 1 : today.getFullYear();
+      return {
+        from: new Date(yr, pq * 3, 1),
+        to:   new Date(yr, pq * 3 + 3, 0),
+      };
+    }
+    case 'this_year':
+      return { from: new Date(today.getFullYear(), 0, 1), to: yd };
+    default:
+      return null;
+  }
+}
+
+function prevPeriod(from, to) {
+  const days = daysBetween(from, to) + 1;
+  const pTo = new Date(from); pTo.setDate(pTo.getDate() - 1);
+  const pFrom = new Date(pTo); pFrom.setDate(pFrom.getDate() - (days - 1));
+  return { from: pFrom, to: pTo };
+}
+
+// ── Aggregation ───────────────────────────────────────────────────────────
+const KEYS = ['spend', 'donors', 'rec', 'einzel', 'imp', 'clicks', 'lpvisits'];
+
+function aggregate(rows, from, to) {
+  const sum = Object.fromEntries(KEYS.map(k => [k, 0]));
+  rows.forEach(row => {
+    const d = new Date(row.date);
+    if (d >= from && d <= to) KEYS.forEach(k => { sum[k] += row[k] || 0; });
+  });
+  sum.spend = Math.round(sum.spend * 100) / 100;
+  return sum;
+}
+
+// ── KPI fill ─────────────────────────────────────────────────────────────
+function fill(cur, prev, pre, isCh) {
+  const cpd  = cur.donors ? Math.round(cur.spend / cur.donors) : 0;
+  const pCpd = prev?.donors ? Math.round(prev.spend / prev.donors) : 0;
+  const lpcvr  = cur.lpvisits ? cur.donors / cur.lpvisits * 100 : 0;
+  const pLpcvr = prev?.lpvisits ? prev.donors / prev.lpvisits * 100 : 0;
+  const ctr  = cur.imp ? cur.clicks / cur.imp * 100 : 0;
+  const pCtr = prev?.imp ? prev.clicks / prev.imp * 100 : 0;
+  const c2d  = cur.clicks ? cur.donors / cur.clicks * 100 : 0;
+  const pC2d = prev?.clicks ? prev.donors / prev.clicks * 100 : 0;
+
+  const d = (v, pv, hib) => delta(v, pv, hib);
+
+  set(pre + 'spend', fmtEur(cur.spend));
+  setD(pre + 'spend-d', d(cur.spend, prev?.spend, true).text, d(cur.spend, prev?.spend, true).cls, isCh);
+  set(pre + 'cpd', cpd + ' €');
+  setD(pre + 'cpd-d', d(cpd, pCpd, false).text, d(cpd, pCpd, false).cls, isCh);
+  set(pre + 'donors', fmtN(cur.donors));
+  setD(pre + 'donors-d', d(cur.donors, prev?.donors, true).text, d(cur.donors, prev?.donors, true).cls, isCh);
+  set(pre + 'lpcvr', lpcvr.toFixed(1) + '%');
+  setD(pre + 'lpcvr-d', d(lpcvr, pLpcvr, true).text, d(lpcvr, pLpcvr, true).cls, isCh);
+  set(pre + 'imp', fmtN(cur.imp));
+  setD(pre + 'imp-d', d(cur.imp, prev?.imp, true).text, d(cur.imp, prev?.imp, true).cls, isCh);
+  set(pre + 'clicks', fmtN(cur.clicks));
+  setD(pre + 'clicks-d', d(cur.clicks, prev?.clicks, true).text, d(cur.clicks, prev?.clicks, true).cls, isCh);
+  set(pre + 'ctr', ctr.toFixed(2) + '%');
+  setD(pre + 'ctr-d', d(ctr, pCtr, true).text, d(ctr, pCtr, true).cls, isCh);
+  set(pre + 'c2d', c2d.toFixed(2) + '%');
+  setD(pre + 'c2d-d', d(c2d, pC2d, true).text, d(c2d, pC2d, true).cls, isCh);
+  if (!isCh) {
+    set(pre + 'einzel', fmtN(cur.einzel));
+    setD(pre + 'einzel-d', d(cur.einzel, prev?.einzel, true).text, d(cur.einzel, prev?.einzel, true).cls, false);
+    set(pre + 'rec', fmtN(cur.rec));
+    setD(pre + 'rec-d', d(cur.rec, prev?.rec, true).text, d(cur.rec, prev?.rec, true).cls, false);
+    set(pre + 'donors', fmtN(cur.donors));
+  }
+}
+
+// ── Render ────────────────────────────────────────────────────────────────
+function render() {
+  const { fb, goog } = DATA;
+  if (!fb || !goog || !RANGE.from) return;
+
+  const { from, to } = RANGE;
+  const { from: pf, to: pt } = prevPeriod(from, to);
+
+  const fbCur  = aggregate(fb.rows,   from, to);
+  const fbPrev = aggregate(fb.rows,   pf,   pt);
+  const ggCur  = aggregate(goog.rows, from, to);
+  const ggPrev = aggregate(goog.rows, pf,   pt);
+
+  const totCur  = Object.fromEntries(KEYS.map(k => [k, fbCur[k]  + ggCur[k]]));
+  const totPrev = Object.fromEntries(KEYS.map(k => [k, fbPrev[k] + ggPrev[k]]));
+  totCur.spend  = Math.round(totCur.spend  * 100) / 100;
+  totPrev.spend = Math.round(totPrev.spend * 100) / 100;
+
+  fill(totCur, totPrev, 'g-',    false);
+  fill(fbCur,  fbPrev,  'm-',    false);
+  fill(ggCur,  ggPrev,  'gg-',   false);
+  fill(fbCur,  fbPrev,  'cv-m-', true);
+  fill(ggCur,  ggPrev,  'cv-g-', true);
+
+  const project = PROJECTS.find(p => p.id === new URLSearchParams(location.search).get('project'));
+  const dateStr = fmtDate(from) + ' – ' + fmtDate(to);
+  set('d-foot-note', (project?.name || '') + ' · ' + dateStr);
+}
+
+// ── Date preset UI ────────────────────────────────────────────────────────
+function setPreset(preset, btn) {
+  document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const customEl = document.getElementById('custom-range');
+  if (preset === 'custom') {
+    customEl.style.display = 'flex';
+    return;
+  }
+  customEl.style.display = 'none';
+
+  const range = getPresetRange(preset);
+  if (range) { RANGE = range; render(); }
+}
+
+function applyCustom() {
+  const from = new Date(document.getElementById('d-from').value);
+  const to   = new Date(document.getElementById('d-to').value);
+  if (!isNaN(from) && !isNaN(to) && from <= to) { RANGE = { from, to }; render(); }
+}
+
+// ── Project switching ─────────────────────────────────────────────────────
+async function loadProject(projectId) {
+  history.pushState({}, '', '?project=' + projectId);
+  set('d-foot-note', 'Lädt Daten...');
+  try {
+    const [fb, goog] = await Promise.all([
+      fetch('data/' + projectId + '/facebook.json').then(r => { if (!r.ok) throw Error(r.status); return r.json(); }),
+      fetch('data/' + projectId + '/google.json').then(r => { if (!r.ok) throw Error(r.status); return r.json(); }),
+    ]);
+    DATA = { fb, goog };
+    render();
+  } catch (e) {
+    set('d-foot-note', 'Fehler: ' + e.message);
+  }
+}
+
+function onProjectChange(id) { loadProject(id); }
+
+// ── Tab / diag toggles ────────────────────────────────────────────────────
+function switchTab(tab, btn) {
+  ['gesamt', 'meta', 'google', 'vergleich'].forEach(t => {
+    document.getElementById('view-' + t).style.display = t === tab ? 'block' : 'none';
+  });
+  document.querySelectorAll('.d-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function toggleDiag(id, el) {
+  const sec = document.getElementById(id);
+  const open = sec.style.display === 'block';
+  sec.style.display = open ? 'none' : 'block';
+  el.innerHTML = '<i class="ti ti-chevron-' + (open ? 'down' : 'up') + '" style="font-size:13px"></i> Diagnose-Metriken ' + (open ? 'einblenden' : 'ausblenden');
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────
+async function init() {
+  // Set default range (28 days)
+  const range = getPresetRange('28d');
+  RANGE = range;
+
+  const projects = await fetch('data/projects.json').then(r => r.json());
+  PROJECTS = projects;
+
+  const sel = document.getElementById('project-select');
+  sel.innerHTML = '';
+  projects.forEach(p => {
+    const opt = document.createElement('option');
+    opt.value = p.id; opt.textContent = p.name;
+    sel.appendChild(opt);
+  });
+
+  const params = new URLSearchParams(location.search);
+  const projectId = params.get('project') || projects[0].id;
+  sel.value = projectId;
+
+  await loadProject(projectId);
+}
+
+init();
+</script>
+</body>
+</html>

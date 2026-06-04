@@ -1,0 +1,3655 @@
+{
+  "updated": "2026-06-04",
+  "rows": [
+    {
+      "date": "2025-06-04",
+      "spend": 74.48,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5575,
+      "clicks": 100,
+      "lpvisits": 106
+    },
+    {
+      "date": "2025-06-05",
+      "spend": 70.07,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 5678,
+      "clicks": 95,
+      "lpvisits": 70
+    },
+    {
+      "date": "2025-06-06",
+      "spend": 70.72,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5918,
+      "clicks": 84,
+      "lpvisits": 53
+    },
+    {
+      "date": "2025-06-07",
+      "spend": 73.76,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 5394,
+      "clicks": 82,
+      "lpvisits": 63
+    },
+    {
+      "date": "2025-06-08",
+      "spend": 81.74,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5864,
+      "clicks": 80,
+      "lpvisits": 58
+    },
+    {
+      "date": "2025-06-09",
+      "spend": 74.25,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6764,
+      "clicks": 94,
+      "lpvisits": 73
+    },
+    {
+      "date": "2025-06-10",
+      "spend": 78.5,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6998,
+      "clicks": 88,
+      "lpvisits": 66
+    },
+    {
+      "date": "2025-06-11",
+      "spend": 73.49,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6080,
+      "clicks": 85,
+      "lpvisits": 63
+    },
+    {
+      "date": "2025-06-12",
+      "spend": 67.92,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5220,
+      "clicks": 66,
+      "lpvisits": 50
+    },
+    {
+      "date": "2025-06-13",
+      "spend": 82.14,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 5723,
+      "clicks": 84,
+      "lpvisits": 59
+    },
+    {
+      "date": "2025-06-14",
+      "spend": 66.92,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 4577,
+      "clicks": 79,
+      "lpvisits": 55
+    },
+    {
+      "date": "2025-06-15",
+      "spend": 80.81,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 5182,
+      "clicks": 91,
+      "lpvisits": 66
+    },
+    {
+      "date": "2025-06-16",
+      "spend": 75.78,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5982,
+      "clicks": 88,
+      "lpvisits": 63
+    },
+    {
+      "date": "2025-06-17",
+      "spend": 76.39,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6366,
+      "clicks": 56,
+      "lpvisits": 49
+    },
+    {
+      "date": "2025-06-18",
+      "spend": 123.23,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10643,
+      "clicks": 109,
+      "lpvisits": 65
+    },
+    {
+      "date": "2025-06-19",
+      "spend": 145.39,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 11212,
+      "clicks": 131,
+      "lpvisits": 89
+    },
+    {
+      "date": "2025-06-20",
+      "spend": 145.69,
+      "donors": 3,
+      "rec": 2,
+      "einzel": 1,
+      "imp": 10870,
+      "clicks": 133,
+      "lpvisits": 88
+    },
+    {
+      "date": "2025-06-21",
+      "spend": 140.44,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9188,
+      "clicks": 131,
+      "lpvisits": 87
+    },
+    {
+      "date": "2025-06-22",
+      "spend": 117.0,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 9486,
+      "clicks": 131,
+      "lpvisits": 93
+    },
+    {
+      "date": "2025-06-23",
+      "spend": 102.24,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 8379,
+      "clicks": 113,
+      "lpvisits": 79
+    },
+    {
+      "date": "2025-06-24",
+      "spend": 119.4,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 9301,
+      "clicks": 131,
+      "lpvisits": 87
+    },
+    {
+      "date": "2025-06-25",
+      "spend": 111.83,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7896,
+      "clicks": 87,
+      "lpvisits": 56
+    },
+    {
+      "date": "2025-06-26",
+      "spend": 108.93,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 7930,
+      "clicks": 98,
+      "lpvisits": 57
+    },
+    {
+      "date": "2025-06-27",
+      "spend": 147.1,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10068,
+      "clicks": 106,
+      "lpvisits": 70
+    },
+    {
+      "date": "2025-06-28",
+      "spend": 149.62,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 9496,
+      "clicks": 122,
+      "lpvisits": 80
+    },
+    {
+      "date": "2025-06-29",
+      "spend": 116.25,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 8502,
+      "clicks": 96,
+      "lpvisits": 63
+    },
+    {
+      "date": "2025-06-30",
+      "spend": 94.93,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7491,
+      "clicks": 91,
+      "lpvisits": 69
+    },
+    {
+      "date": "2025-07-01",
+      "spend": 102.59,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8440,
+      "clicks": 81,
+      "lpvisits": 55
+    },
+    {
+      "date": "2025-07-02",
+      "spend": 113.15,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10252,
+      "clicks": 125,
+      "lpvisits": 81
+    },
+    {
+      "date": "2025-07-03",
+      "spend": 106.87,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9382,
+      "clicks": 123,
+      "lpvisits": 83
+    },
+    {
+      "date": "2025-07-04",
+      "spend": 104.13,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8290,
+      "clicks": 99,
+      "lpvisits": 64
+    },
+    {
+      "date": "2025-07-05",
+      "spend": 91.4,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6675,
+      "clicks": 97,
+      "lpvisits": 74
+    },
+    {
+      "date": "2025-07-06",
+      "spend": 121.92,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8630,
+      "clicks": 115,
+      "lpvisits": 72
+    },
+    {
+      "date": "2025-07-07",
+      "spend": 37.96,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2778,
+      "clicks": 45,
+      "lpvisits": 27
+    },
+    {
+      "date": "2025-07-08",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-09",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-10",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-11",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-12",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-14",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-15",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-16",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-07-17",
+      "spend": 71.69,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 5933,
+      "clicks": 57,
+      "lpvisits": 21
+    },
+    {
+      "date": "2025-07-18",
+      "spend": 161.3,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 10442,
+      "clicks": 111,
+      "lpvisits": 65
+    },
+    {
+      "date": "2025-07-19",
+      "spend": 120.43,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 10368,
+      "clicks": 112,
+      "lpvisits": 58
+    },
+    {
+      "date": "2025-07-20",
+      "spend": 119.32,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 11223,
+      "clicks": 94,
+      "lpvisits": 52
+    },
+    {
+      "date": "2025-07-21",
+      "spend": 111.91,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 12301,
+      "clicks": 91,
+      "lpvisits": 47
+    },
+    {
+      "date": "2025-07-22",
+      "spend": 125.86,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 10728,
+      "clicks": 72,
+      "lpvisits": 35
+    },
+    {
+      "date": "2025-07-23",
+      "spend": 288.55,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 23401,
+      "clicks": 255,
+      "lpvisits": 186
+    },
+    {
+      "date": "2025-07-24",
+      "spend": 222.71,
+      "donors": 3,
+      "rec": 2,
+      "einzel": 1,
+      "imp": 15599,
+      "clicks": 162,
+      "lpvisits": 108
+    },
+    {
+      "date": "2025-07-25",
+      "spend": 153.07,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10985,
+      "clicks": 91,
+      "lpvisits": 51
+    },
+    {
+      "date": "2025-07-26",
+      "spend": 154.89,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 9469,
+      "clicks": 82,
+      "lpvisits": 58
+    },
+    {
+      "date": "2025-07-27",
+      "spend": 172.59,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8332,
+      "clicks": 59,
+      "lpvisits": 31
+    },
+    {
+      "date": "2025-07-28",
+      "spend": 100.49,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 4635,
+      "clicks": 29,
+      "lpvisits": 17
+    },
+    {
+      "date": "2025-07-29",
+      "spend": 61.13,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2614,
+      "clicks": 8,
+      "lpvisits": 2
+    },
+    {
+      "date": "2025-07-30",
+      "spend": 101.92,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 4522,
+      "clicks": 18,
+      "lpvisits": 9
+    },
+    {
+      "date": "2025-07-31",
+      "spend": 114.79,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6781,
+      "clicks": 24,
+      "lpvisits": 8
+    },
+    {
+      "date": "2025-08-01",
+      "spend": 74.42,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 6478,
+      "clicks": 47,
+      "lpvisits": 22
+    },
+    {
+      "date": "2025-08-02",
+      "spend": 54.36,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5507,
+      "clicks": 30,
+      "lpvisits": 13
+    },
+    {
+      "date": "2025-08-03",
+      "spend": 87.63,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 7779,
+      "clicks": 52,
+      "lpvisits": 30
+    },
+    {
+      "date": "2025-08-04",
+      "spend": 80.31,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8118,
+      "clicks": 70,
+      "lpvisits": 36
+    },
+    {
+      "date": "2025-08-05",
+      "spend": 170.08,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 11842,
+      "clicks": 111,
+      "lpvisits": 35
+    },
+    {
+      "date": "2025-08-06",
+      "spend": 109.96,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 7201,
+      "clicks": 36,
+      "lpvisits": 10
+    },
+    {
+      "date": "2025-08-07",
+      "spend": 129.95,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8371,
+      "clicks": 51,
+      "lpvisits": 13
+    },
+    {
+      "date": "2025-08-08",
+      "spend": 148.47,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 10903,
+      "clicks": 55,
+      "lpvisits": 13
+    },
+    {
+      "date": "2025-08-09",
+      "spend": 105.72,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 6836,
+      "clicks": 49,
+      "lpvisits": 22
+    },
+    {
+      "date": "2025-08-10",
+      "spend": 129.42,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 7994,
+      "clicks": 46,
+      "lpvisits": 20
+    },
+    {
+      "date": "2025-08-11",
+      "spend": 136.73,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10454,
+      "clicks": 55,
+      "lpvisits": 33
+    },
+    {
+      "date": "2025-08-12",
+      "spend": 84.35,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5716,
+      "clicks": 25,
+      "lpvisits": 19
+    },
+    {
+      "date": "2025-08-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 1
+    },
+    {
+      "date": "2025-08-14",
+      "spend": 148.87,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10565,
+      "clicks": 71,
+      "lpvisits": 5
+    },
+    {
+      "date": "2025-08-15",
+      "spend": 31.82,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 1736,
+      "clicks": 24,
+      "lpvisits": 4
+    },
+    {
+      "date": "2025-08-16",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-17",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-18",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-19",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-20",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-21",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-22",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-24",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-08-28",
+      "spend": 55.14,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 4652,
+      "clicks": 77,
+      "lpvisits": 30
+    },
+    {
+      "date": "2025-08-29",
+      "spend": 84.03,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6229,
+      "clicks": 133,
+      "lpvisits": 51
+    },
+    {
+      "date": "2025-08-30",
+      "spend": 54.02,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 3463,
+      "clicks": 80,
+      "lpvisits": 35
+    },
+    {
+      "date": "2025-08-31",
+      "spend": 83.03,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5207,
+      "clicks": 116,
+      "lpvisits": 55
+    },
+    {
+      "date": "2025-09-01",
+      "spend": 107.43,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8560,
+      "clicks": 147,
+      "lpvisits": 60
+    },
+    {
+      "date": "2025-09-02",
+      "spend": 103.53,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8685,
+      "clicks": 148,
+      "lpvisits": 46
+    },
+    {
+      "date": "2025-09-03",
+      "spend": 131.87,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 11805,
+      "clicks": 187,
+      "lpvisits": 53
+    },
+    {
+      "date": "2025-09-04",
+      "spend": 141.39,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 12686,
+      "clicks": 222,
+      "lpvisits": 85
+    },
+    {
+      "date": "2025-09-05",
+      "spend": 166.74,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 14009,
+      "clicks": 198,
+      "lpvisits": 70
+    },
+    {
+      "date": "2025-09-06",
+      "spend": 182.16,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 14249,
+      "clicks": 235,
+      "lpvisits": 77
+    },
+    {
+      "date": "2025-09-07",
+      "spend": 251.7,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 20042,
+      "clicks": 322,
+      "lpvisits": 82
+    },
+    {
+      "date": "2025-09-08",
+      "spend": 229.02,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 19295,
+      "clicks": 287,
+      "lpvisits": 123
+    },
+    {
+      "date": "2025-09-09",
+      "spend": 285.06,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 22549,
+      "clicks": 266,
+      "lpvisits": 108
+    },
+    {
+      "date": "2025-09-10",
+      "spend": 319.03,
+      "donors": 5,
+      "rec": 2,
+      "einzel": 3,
+      "imp": 24534,
+      "clicks": 264,
+      "lpvisits": 109
+    },
+    {
+      "date": "2025-09-11",
+      "spend": 350.65,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 26006,
+      "clicks": 303,
+      "lpvisits": 125
+    },
+    {
+      "date": "2025-09-12",
+      "spend": 363.17,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 26830,
+      "clicks": 290,
+      "lpvisits": 113
+    },
+    {
+      "date": "2025-09-13",
+      "spend": 291.34,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 19364,
+      "clicks": 234,
+      "lpvisits": 85
+    },
+    {
+      "date": "2025-09-14",
+      "spend": 297.09,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 21103,
+      "clicks": 189,
+      "lpvisits": 71
+    },
+    {
+      "date": "2025-09-15",
+      "spend": 397.25,
+      "donors": 3,
+      "rec": 2,
+      "einzel": 1,
+      "imp": 29233,
+      "clicks": 268,
+      "lpvisits": 111
+    },
+    {
+      "date": "2025-09-16",
+      "spend": 527.7,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 34369,
+      "clicks": 276,
+      "lpvisits": 101
+    },
+    {
+      "date": "2025-09-17",
+      "spend": 263.9,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 18856,
+      "clicks": 169,
+      "lpvisits": 78
+    },
+    {
+      "date": "2025-09-18",
+      "spend": 175.91,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 14156,
+      "clicks": 130,
+      "lpvisits": 56
+    },
+    {
+      "date": "2025-09-19",
+      "spend": 164.45,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 13783,
+      "clicks": 144,
+      "lpvisits": 67
+    },
+    {
+      "date": "2025-09-20",
+      "spend": 156.82,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 12532,
+      "clicks": 100,
+      "lpvisits": 46
+    },
+    {
+      "date": "2025-09-21",
+      "spend": 192.45,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 15295,
+      "clicks": 133,
+      "lpvisits": 47
+    },
+    {
+      "date": "2025-09-22",
+      "spend": 187.81,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 16627,
+      "clicks": 145,
+      "lpvisits": 42
+    },
+    {
+      "date": "2025-09-23",
+      "spend": 179.55,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 14788,
+      "clicks": 134,
+      "lpvisits": 60
+    },
+    {
+      "date": "2025-09-24",
+      "spend": 326.72,
+      "donors": 16,
+      "rec": 8,
+      "einzel": 8,
+      "imp": 24951,
+      "clicks": 164,
+      "lpvisits": 72
+    },
+    {
+      "date": "2025-09-25",
+      "spend": 365.85,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 25625,
+      "clicks": 136,
+      "lpvisits": 50
+    },
+    {
+      "date": "2025-09-26",
+      "spend": 318.37,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 9088,
+      "clicks": 52,
+      "lpvisits": 19
+    },
+    {
+      "date": "2025-09-27",
+      "spend": 191.19,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2707,
+      "clicks": 10,
+      "lpvisits": 2
+    },
+    {
+      "date": "2025-09-28",
+      "spend": 159.94,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7055,
+      "clicks": 49,
+      "lpvisits": 54
+    },
+    {
+      "date": "2025-09-29",
+      "spend": 213.48,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 16412,
+      "clicks": 91,
+      "lpvisits": 30
+    },
+    {
+      "date": "2025-09-30",
+      "spend": 124.14,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7453,
+      "clicks": 38,
+      "lpvisits": 13
+    },
+    {
+      "date": "2025-10-01",
+      "spend": 12.5,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 722,
+      "clicks": 1,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-04",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-05",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-06",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-07",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-08",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-09",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-10",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-11",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-12",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-14",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-15",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-16",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-17",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-18",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-19",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-20",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-21",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-22",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-24",
+      "spend": 0.21,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 96,
+      "clicks": 1,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-10-26",
+      "spend": 117.42,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9592,
+      "clicks": 168,
+      "lpvisits": 92
+    },
+    {
+      "date": "2025-10-27",
+      "spend": 142.79,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9756,
+      "clicks": 151,
+      "lpvisits": 81
+    },
+    {
+      "date": "2025-10-28",
+      "spend": 118.85,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8970,
+      "clicks": 116,
+      "lpvisits": 100
+    },
+    {
+      "date": "2025-10-29",
+      "spend": 150.79,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 8839,
+      "clicks": 134,
+      "lpvisits": 107
+    },
+    {
+      "date": "2025-10-30",
+      "spend": 150.23,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9624,
+      "clicks": 97,
+      "lpvisits": 74
+    },
+    {
+      "date": "2025-10-31",
+      "spend": 147.78,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 7135,
+      "clicks": 85,
+      "lpvisits": 66
+    },
+    {
+      "date": "2025-11-01",
+      "spend": 140.34,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7170,
+      "clicks": 127,
+      "lpvisits": 76
+    },
+    {
+      "date": "2025-11-02",
+      "spend": 168.01,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 7656,
+      "clicks": 100,
+      "lpvisits": 78
+    },
+    {
+      "date": "2025-11-03",
+      "spend": 162.71,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9314,
+      "clicks": 86,
+      "lpvisits": 55
+    },
+    {
+      "date": "2025-11-04",
+      "spend": 160.89,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8678,
+      "clicks": 88,
+      "lpvisits": 52
+    },
+    {
+      "date": "2025-11-05",
+      "spend": 137.34,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8012,
+      "clicks": 81,
+      "lpvisits": 50
+    },
+    {
+      "date": "2025-11-06",
+      "spend": 136.31,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10243,
+      "clicks": 62,
+      "lpvisits": 39
+    },
+    {
+      "date": "2025-11-07",
+      "spend": 134.07,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 8987,
+      "clicks": 57,
+      "lpvisits": 48
+    },
+    {
+      "date": "2025-11-08",
+      "spend": 150.22,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 8128,
+      "clicks": 149,
+      "lpvisits": 80
+    },
+    {
+      "date": "2025-11-09",
+      "spend": 181.03,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 9283,
+      "clicks": 162,
+      "lpvisits": 115
+    },
+    {
+      "date": "2025-11-10",
+      "spend": 139.9,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6781,
+      "clicks": 115,
+      "lpvisits": 78
+    },
+    {
+      "date": "2025-11-11",
+      "spend": 149.73,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6971,
+      "clicks": 124,
+      "lpvisits": 81
+    },
+    {
+      "date": "2025-11-12",
+      "spend": 146.65,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6093,
+      "clicks": 82,
+      "lpvisits": 50
+    },
+    {
+      "date": "2025-11-13",
+      "spend": 144.74,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6050,
+      "clicks": 82,
+      "lpvisits": 61
+    },
+    {
+      "date": "2025-11-14",
+      "spend": 143.43,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6152,
+      "clicks": 124,
+      "lpvisits": 67
+    },
+    {
+      "date": "2025-11-15",
+      "spend": 142.8,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5084,
+      "clicks": 92,
+      "lpvisits": 60
+    },
+    {
+      "date": "2025-11-16",
+      "spend": 145.86,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 4834,
+      "clicks": 64,
+      "lpvisits": 42
+    },
+    {
+      "date": "2025-11-17",
+      "spend": 120.21,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 4610,
+      "clicks": 47,
+      "lpvisits": 40
+    },
+    {
+      "date": "2025-11-18",
+      "spend": 121.49,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 4720,
+      "clicks": 45,
+      "lpvisits": 37
+    },
+    {
+      "date": "2025-11-19",
+      "spend": 58.73,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 1913,
+      "clicks": 26,
+      "lpvisits": 20
+    },
+    {
+      "date": "2025-11-20",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-21",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-22",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-24",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-29",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-11-30",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-01",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-04",
+      "spend": 82.67,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 6671,
+      "clicks": 43,
+      "lpvisits": 19
+    },
+    {
+      "date": "2025-12-05",
+      "spend": 135.56,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 10003,
+      "clicks": 41,
+      "lpvisits": 25
+    },
+    {
+      "date": "2025-12-06",
+      "spend": 154.94,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10458,
+      "clicks": 42,
+      "lpvisits": 18
+    },
+    {
+      "date": "2025-12-07",
+      "spend": 174.45,
+      "donors": 14,
+      "rec": 7,
+      "einzel": 7,
+      "imp": 13702,
+      "clicks": 76,
+      "lpvisits": 36
+    },
+    {
+      "date": "2025-12-08",
+      "spend": 163.61,
+      "donors": 8,
+      "rec": 4,
+      "einzel": 4,
+      "imp": 16449,
+      "clicks": 61,
+      "lpvisits": 46
+    },
+    {
+      "date": "2025-12-09",
+      "spend": 142.25,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 13186,
+      "clicks": 43,
+      "lpvisits": 19
+    },
+    {
+      "date": "2025-12-10",
+      "spend": 215.78,
+      "donors": 4,
+      "rec": 2,
+      "einzel": 2,
+      "imp": 14454,
+      "clicks": 61,
+      "lpvisits": 25
+    },
+    {
+      "date": "2025-12-11",
+      "spend": 190.15,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 9911,
+      "clicks": 34,
+      "lpvisits": 24
+    },
+    {
+      "date": "2025-12-12",
+      "spend": 181.25,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 7924,
+      "clicks": 38,
+      "lpvisits": 19
+    },
+    {
+      "date": "2025-12-13",
+      "spend": 166.19,
+      "donors": 2,
+      "rec": 2,
+      "einzel": 0,
+      "imp": 8317,
+      "clicks": 38,
+      "lpvisits": 24
+    },
+    {
+      "date": "2025-12-14",
+      "spend": 220.2,
+      "donors": 2,
+      "rec": 2,
+      "einzel": 0,
+      "imp": 12447,
+      "clicks": 54,
+      "lpvisits": 31
+    },
+    {
+      "date": "2025-12-15",
+      "spend": 200.7,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 18982,
+      "clicks": 60,
+      "lpvisits": 20
+    },
+    {
+      "date": "2025-12-16",
+      "spend": 204.19,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 19786,
+      "clicks": 55,
+      "lpvisits": 17
+    },
+    {
+      "date": "2025-12-17",
+      "spend": 158.96,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 12081,
+      "clicks": 47,
+      "lpvisits": 21
+    },
+    {
+      "date": "2025-12-18",
+      "spend": 88.45,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 5230,
+      "clicks": 18,
+      "lpvisits": 6
+    },
+    {
+      "date": "2025-12-19",
+      "spend": 96.4,
+      "donors": 3,
+      "rec": 1,
+      "einzel": 2,
+      "imp": 5049,
+      "clicks": 13,
+      "lpvisits": 6
+    },
+    {
+      "date": "2025-12-20",
+      "spend": 77.83,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 3915,
+      "clicks": 16,
+      "lpvisits": 8
+    },
+    {
+      "date": "2025-12-21",
+      "spend": 129.02,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6176,
+      "clicks": 23,
+      "lpvisits": 11
+    },
+    {
+      "date": "2025-12-22",
+      "spend": 38.01,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2116,
+      "clicks": 5,
+      "lpvisits": 3
+    },
+    {
+      "date": "2025-12-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-24",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-29",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-30",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2025-12-31",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-01",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-04",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-05",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-06",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-07",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-08",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-09",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-10",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-11",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-12",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-14",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-15",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-16",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-17",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-18",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-19",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-20",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-21",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-22",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-24",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-29",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-30",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-01-31",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-01",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-04",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-05",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-06",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-07",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-08",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-09",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-10",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-11",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-12",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-14",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-15",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-16",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-17",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-18",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-19",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-20",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-21",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-22",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-23",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-24",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-02-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-01",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-04",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-05",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-06",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-07",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-08",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-09",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-10",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-11",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-12",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-13",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-14",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-15",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-16",
+      "spend": 170.51,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 16669,
+      "clicks": 86,
+      "lpvisits": 17
+    },
+    {
+      "date": "2026-03-17",
+      "spend": 197.64,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 16514,
+      "clicks": 84,
+      "lpvisits": 30
+    },
+    {
+      "date": "2026-03-18",
+      "spend": 149.83,
+      "donors": 1,
+      "rec": 1,
+      "einzel": 0,
+      "imp": 14844,
+      "clicks": 58,
+      "lpvisits": 13
+    },
+    {
+      "date": "2026-03-19",
+      "spend": 136.17,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 16872,
+      "clicks": 77,
+      "lpvisits": 16
+    },
+    {
+      "date": "2026-03-20",
+      "spend": 139.9,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 17425,
+      "clicks": 63,
+      "lpvisits": 12
+    },
+    {
+      "date": "2026-03-21",
+      "spend": 157.93,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 15176,
+      "clicks": 63,
+      "lpvisits": 13
+    },
+    {
+      "date": "2026-03-22",
+      "spend": 146.46,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 17374,
+      "clicks": 52,
+      "lpvisits": 10
+    },
+    {
+      "date": "2026-03-23",
+      "spend": 103.52,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 12567,
+      "clicks": 31,
+      "lpvisits": 5
+    },
+    {
+      "date": "2026-03-24",
+      "spend": 22.03,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2325,
+      "clicks": 8,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-03-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-03-27",
+      "spend": 58.96,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8493,
+      "clicks": 95,
+      "lpvisits": 47
+    },
+    {
+      "date": "2026-03-28",
+      "spend": 81.16,
+      "donors": 10,
+      "rec": 0,
+      "einzel": 10,
+      "imp": 9871,
+      "clicks": 148,
+      "lpvisits": 71
+    },
+    {
+      "date": "2026-03-29",
+      "spend": 157.38,
+      "donors": 11,
+      "rec": 0,
+      "einzel": 11,
+      "imp": 18977,
+      "clicks": 298,
+      "lpvisits": 132
+    },
+    {
+      "date": "2026-03-30",
+      "spend": 81.87,
+      "donors": 13,
+      "rec": 0,
+      "einzel": 13,
+      "imp": 12459,
+      "clicks": 151,
+      "lpvisits": 91
+    },
+    {
+      "date": "2026-03-31",
+      "spend": 45.23,
+      "donors": 7,
+      "rec": 0,
+      "einzel": 7,
+      "imp": 7608,
+      "clicks": 95,
+      "lpvisits": 47
+    },
+    {
+      "date": "2026-04-01",
+      "spend": 49.36,
+      "donors": 11,
+      "rec": 0,
+      "einzel": 11,
+      "imp": 8801,
+      "clicks": 89,
+      "lpvisits": 60
+    },
+    {
+      "date": "2026-04-02",
+      "spend": 43.95,
+      "donors": 8,
+      "rec": 0,
+      "einzel": 8,
+      "imp": 7065,
+      "clicks": 73,
+      "lpvisits": 38
+    },
+    {
+      "date": "2026-04-03",
+      "spend": 44.73,
+      "donors": 4,
+      "rec": 0,
+      "einzel": 4,
+      "imp": 8112,
+      "clicks": 83,
+      "lpvisits": 36
+    },
+    {
+      "date": "2026-04-04",
+      "spend": 55.33,
+      "donors": 16,
+      "rec": 0,
+      "einzel": 16,
+      "imp": 9359,
+      "clicks": 108,
+      "lpvisits": 64
+    },
+    {
+      "date": "2026-04-05",
+      "spend": 63.83,
+      "donors": 8,
+      "rec": 0,
+      "einzel": 8,
+      "imp": 10290,
+      "clicks": 111,
+      "lpvisits": 69
+    },
+    {
+      "date": "2026-04-06",
+      "spend": 48.68,
+      "donors": 7,
+      "rec": 0,
+      "einzel": 7,
+      "imp": 8522,
+      "clicks": 103,
+      "lpvisits": 65
+    },
+    {
+      "date": "2026-04-07",
+      "spend": 46.43,
+      "donors": 2,
+      "rec": 0,
+      "einzel": 2,
+      "imp": 8378,
+      "clicks": 75,
+      "lpvisits": 33
+    },
+    {
+      "date": "2026-04-08",
+      "spend": 50.93,
+      "donors": 3,
+      "rec": 0,
+      "einzel": 3,
+      "imp": 9755,
+      "clicks": 113,
+      "lpvisits": 97
+    },
+    {
+      "date": "2026-04-09",
+      "spend": 37.18,
+      "donors": 6,
+      "rec": 0,
+      "einzel": 6,
+      "imp": 6991,
+      "clicks": 74,
+      "lpvisits": 38
+    },
+    {
+      "date": "2026-04-10",
+      "spend": 46.1,
+      "donors": 4,
+      "rec": 0,
+      "einzel": 4,
+      "imp": 7683,
+      "clicks": 61,
+      "lpvisits": 42
+    },
+    {
+      "date": "2026-04-11",
+      "spend": 56.81,
+      "donors": 4,
+      "rec": 0,
+      "einzel": 4,
+      "imp": 7541,
+      "clicks": 87,
+      "lpvisits": 50
+    },
+    {
+      "date": "2026-04-12",
+      "spend": 55.38,
+      "donors": 8,
+      "rec": 0,
+      "einzel": 8,
+      "imp": 9096,
+      "clicks": 93,
+      "lpvisits": 65
+    },
+    {
+      "date": "2026-04-13",
+      "spend": 49.5,
+      "donors": 6,
+      "rec": 0,
+      "einzel": 6,
+      "imp": 8807,
+      "clicks": 100,
+      "lpvisits": 56
+    },
+    {
+      "date": "2026-04-14",
+      "spend": 49.3,
+      "donors": 7,
+      "rec": 0,
+      "einzel": 7,
+      "imp": 8651,
+      "clicks": 77,
+      "lpvisits": 39
+    },
+    {
+      "date": "2026-04-15",
+      "spend": 50.37,
+      "donors": 9,
+      "rec": 0,
+      "einzel": 9,
+      "imp": 9596,
+      "clicks": 90,
+      "lpvisits": 55
+    },
+    {
+      "date": "2026-04-16",
+      "spend": 52.1,
+      "donors": 11,
+      "rec": 0,
+      "einzel": 11,
+      "imp": 10882,
+      "clicks": 99,
+      "lpvisits": 50
+    },
+    {
+      "date": "2026-04-17",
+      "spend": 45.8,
+      "donors": 6,
+      "rec": 0,
+      "einzel": 6,
+      "imp": 9011,
+      "clicks": 74,
+      "lpvisits": 36
+    },
+    {
+      "date": "2026-04-18",
+      "spend": 47.23,
+      "donors": 6,
+      "rec": 0,
+      "einzel": 6,
+      "imp": 9105,
+      "clicks": 81,
+      "lpvisits": 41
+    },
+    {
+      "date": "2026-04-19",
+      "spend": 54.48,
+      "donors": 4,
+      "rec": 0,
+      "einzel": 4,
+      "imp": 9829,
+      "clicks": 103,
+      "lpvisits": 50
+    },
+    {
+      "date": "2026-04-20",
+      "spend": 51.97,
+      "donors": 1,
+      "rec": 0,
+      "einzel": 1,
+      "imp": 9764,
+      "clicks": 66,
+      "lpvisits": 34
+    },
+    {
+      "date": "2026-04-21",
+      "spend": 50.41,
+      "donors": 3,
+      "rec": 0,
+      "einzel": 3,
+      "imp": 8313,
+      "clicks": 54,
+      "lpvisits": 23
+    },
+    {
+      "date": "2026-04-22",
+      "spend": 49.91,
+      "donors": 2,
+      "rec": 0,
+      "einzel": 2,
+      "imp": 7907,
+      "clicks": 43,
+      "lpvisits": 19
+    },
+    {
+      "date": "2026-04-23",
+      "spend": 44.16,
+      "donors": 2,
+      "rec": 0,
+      "einzel": 2,
+      "imp": 5459,
+      "clicks": 36,
+      "lpvisits": 16
+    },
+    {
+      "date": "2026-04-24",
+      "spend": 4.68,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 435,
+      "clicks": 4,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-04-25",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-04-26",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-04-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-04-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-04-29",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-04-30",
+      "spend": 75.96,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6398,
+      "clicks": 56,
+      "lpvisits": 2
+    },
+    {
+      "date": "2026-05-01",
+      "spend": 157.3,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9087,
+      "clicks": 38,
+      "lpvisits": 4
+    },
+    {
+      "date": "2026-05-02",
+      "spend": 249.59,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 14112,
+      "clicks": 122,
+      "lpvisits": 5
+    },
+    {
+      "date": "2026-05-03",
+      "spend": 215.32,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 10150,
+      "clicks": 60,
+      "lpvisits": 6
+    },
+    {
+      "date": "2026-05-04",
+      "spend": 177.36,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9705,
+      "clicks": 57,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-05-05",
+      "spend": 128.04,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5582,
+      "clicks": 28,
+      "lpvisits": 3
+    },
+    {
+      "date": "2026-05-06",
+      "spend": 110.38,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 6493,
+      "clicks": 47,
+      "lpvisits": 5
+    },
+    {
+      "date": "2026-05-07",
+      "spend": 249.53,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 13453,
+      "clicks": 127,
+      "lpvisits": 14
+    },
+    {
+      "date": "2026-05-08",
+      "spend": 208.61,
+      "donors": 6,
+      "rec": 3,
+      "einzel": 3,
+      "imp": 10247,
+      "clicks": 109,
+      "lpvisits": 15
+    },
+    {
+      "date": "2026-05-09",
+      "spend": 171.68,
+      "donors": 3,
+      "rec": 2,
+      "einzel": 1,
+      "imp": 7999,
+      "clicks": 77,
+      "lpvisits": 8
+    },
+    {
+      "date": "2026-05-10",
+      "spend": 254.19,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 15449,
+      "clicks": 106,
+      "lpvisits": 10
+    },
+    {
+      "date": "2026-05-11",
+      "spend": 172.58,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 12401,
+      "clicks": 103,
+      "lpvisits": 10
+    },
+    {
+      "date": "2026-05-12",
+      "spend": 130.25,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 5594,
+      "clicks": 25,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-05-13",
+      "spend": 276.57,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 16676,
+      "clicks": 132,
+      "lpvisits": 12
+    },
+    {
+      "date": "2026-05-14",
+      "spend": 357.81,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 20502,
+      "clicks": 213,
+      "lpvisits": 18
+    },
+    {
+      "date": "2026-05-15",
+      "spend": 152.11,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9461,
+      "clicks": 92,
+      "lpvisits": 7
+    },
+    {
+      "date": "2026-05-16",
+      "spend": 74.4,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5521,
+      "clicks": 39,
+      "lpvisits": 7
+    },
+    {
+      "date": "2026-05-17",
+      "spend": 134.8,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 9183,
+      "clicks": 65,
+      "lpvisits": 3
+    },
+    {
+      "date": "2026-05-18",
+      "spend": 111.66,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 8184,
+      "clicks": 51,
+      "lpvisits": 4
+    },
+    {
+      "date": "2026-05-19",
+      "spend": 72.39,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 5903,
+      "clicks": 55,
+      "lpvisits": 4
+    },
+    {
+      "date": "2026-05-20",
+      "spend": 73.57,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 6355,
+      "clicks": 54,
+      "lpvisits": 2
+    },
+    {
+      "date": "2026-05-21",
+      "spend": 69.82,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 3673,
+      "clicks": 17,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-22",
+      "spend": 75.87,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 3076,
+      "clicks": 9,
+      "lpvisits": 3
+    },
+    {
+      "date": "2026-05-23",
+      "spend": 73.53,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2780,
+      "clicks": 11,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-24",
+      "spend": 90.34,
+      "donors": 2,
+      "rec": 1,
+      "einzel": 1,
+      "imp": 3238,
+      "clicks": 16,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-05-25",
+      "spend": 89.02,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 3369,
+      "clicks": 16,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-05-26",
+      "spend": 20.25,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 924,
+      "clicks": 2,
+      "lpvisits": 1
+    },
+    {
+      "date": "2026-05-27",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-28",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-29",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-30",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-05-31",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-06-01",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-06-02",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    },
+    {
+      "date": "2026-06-03",
+      "spend": 0.0,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 0,
+      "clicks": 0,
+      "lpvisits": 0
+    }
+  ]
+}
