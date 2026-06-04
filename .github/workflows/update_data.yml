@@ -2,9 +2,8 @@ name: Update dashboard data
 
 on:
   schedule:
-    # Runs every day at 06:00 UTC (adjust to your timezone)
-    - cron: "0 6 * * *"
-  workflow_dispatch: # allows manual trigger from GitHub UI
+    - cron: "0 6 * * *"   # every day at 06:00 UTC
+  workflow_dispatch:        # allows manual trigger from GitHub UI
 
 jobs:
   update:
@@ -18,26 +17,17 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install facebook-business google-ads python-dotenv
+        run: pip install requests python-dotenv
 
       - name: Run Facebook pipeline
         env:
-          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
-          FB_APP_ID: ${{ secrets.FB_APP_ID }}
-          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          WINDSOR_API_KEY: ${{ secrets.WINDSOR_API_KEY }}
         run: python pipelines/facebook_pipeline.py
 
       - name: Run Google Ads pipeline
         env:
-          GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
-          GOOGLE_ADS_CLIENT_ID: ${{ secrets.GOOGLE_ADS_CLIENT_ID }}
-          GOOGLE_ADS_CLIENT_SECRET: ${{ secrets.GOOGLE_ADS_CLIENT_SECRET }}
-          GOOGLE_ADS_REFRESH_TOKEN: ${{ secrets.GOOGLE_ADS_REFRESH_TOKEN }}
-          GOOGLE_ADS_LOGIN_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_LOGIN_CUSTOMER_ID }}
+          WINDSOR_API_KEY: ${{ secrets.WINDSOR_API_KEY }}
         run: python pipelines/google_pipeline.py
-
-      - name: Run combine
-        run: python pipelines/combine.py
 
       - name: Commit and push updated data
         run: |
