@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09",
+  "updated": "2026-07-10",
   "rows": [
     {
       "date": "2025-06-04",
@@ -3990,6 +3990,16 @@
       "imp": 2725,
       "clicks": 142,
       "lpvisits": 68
+    },
+    {
+      "date": "2026-07-09",
+      "spend": 43.76,
+      "donors": 0,
+      "rec": 0,
+      "einzel": 0,
+      "imp": 2441,
+      "clicks": 161,
+      "lpvisits": 84
     }
   ]
 }
